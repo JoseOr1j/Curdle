@@ -34,7 +34,7 @@ function App() {
   }
   
   const onDelete = () => {
-    if (currAttempt.letter === 0) return;
+    if (currAttempt.letterPos === 0) return;
     const newBoard = [...board];
     newBoard[currAttempt.attempt][currAttempt.letterPos - 1] = "";
     setBoard(newBoard);
