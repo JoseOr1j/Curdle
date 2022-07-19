@@ -1,0 +1,28 @@
+/* Style the table */
+table.custHist-table {
+    margin-top: 50px;     /* Adjust this to move the history table up or down */
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+/* Style table headers and table data */
+th.custHist-th {
+    color: rgb(144, 212, 212);
+}
+
+td.custHist-td {
+    color: white;
+}
+
+th.custHist-th:first-child, td.custHist-td:first-child {
+    text-align: left;
+}
+
+th.custHist-th:last-child, td.custHist-td:last-child {
+    text-align: right;
+}
+
+caption.custHist-caption {
+    color:rgb(144, 212, 212);
+    font-size: large;
+}

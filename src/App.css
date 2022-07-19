@@ -29,12 +29,13 @@ nav h1 {
   color: white;
   font-size: 45px;
 }
+
 .game {
   width: 100vw;
-  height: calc(100vh - 170px);
+  height: calc(100vh - 100px);
   display: flex;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 10px;
   flex-direction: column;
 }
 
@@ -92,6 +93,7 @@ nav h1 {
   justify-content: center;
   margin: 5px;
 }
+
 .line2 {
   flex: 33%;
   display: flex;
@@ -99,6 +101,7 @@ nav h1 {
   justify-content: center;
   margin: 5px;
 }
+
 .line3 {
   flex: 33%;
   display: flex;
@@ -124,7 +127,302 @@ nav h1 {
 #big {
   width: 100px;
 }
+
 #disabled {
   background-color: #3a393c;
 }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+input {
+  padding: 12px;
+  margin: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 4px #ccc;
+  border-radius: 6px;
+  font-size: 18px;
+  width: 93%;
+}
+
+button {
+  background-color: teal;
+  border: none;
+  color: white;
+  padding: 12px;
+  margin: 12px 0;
+  box-shadow: 0 1px 6px #ccc;
+  width: 100%;
+  border-radius: 6px;
+  font-size: 18px;
+}
+
+.container {
+  box-shadow: 0 1px 6px #ccc;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  padding: 22px;
+}
+
+.container>p {
+  cursor: pointer;
+  margin: 12px;
+}
+
+.form {
+  width: 100%;
+}
+
+.form>h2 {
+  text-align: center;
+}
+
+.form>form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form>form>p {
+  cursor: pointer;
+}
+
+.error {
+  background-color: tomato;
+  color: white;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: bold;
+  max-width: 400px;
+  margin-bottom: 18px;
+}
+
+/* --------------------- Button Group ---------------------*/
+/* BUTTON STYLING */
+.btn-group button2 {
+  background-color: teal; /* Teal background */
+  border: none; /* No border */
+  color: white; /* White text */
+  padding: 10px 24px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  border-radius: 10px; /* Rounded buttons */
+  margin: 0 3px; /* Spacing between buttons */
+  margin-top: 2em; /* Top margin spacing. Adjust to whatever you want */
+  margin-bottom: 1em; /* Bottom margin spacing. Adjust to whatever you want */
+}
+
+.btn-group button2:not(:last-child) {
+  border-right: none; /* Prevent double borders */
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Add a background color on hover */
+.btn-group button2:hover {
+  background-color: rgba(0, 128, 128, 0.5);  /* Dark teal */
+}
+
+/* Second style for btn-group */
+.btn-group-style-2 {
+  float: right;
+  color: white; /* Change colors, fonts, etc. */
+}
+
+/* ------------------- Button Toolbar ------------------- */
+.btn-toolbar .btn-group {
+  display: inline-block;  /* also works with float: left */
+}
+
+/* Divider to fill space */
+.divider {
+  width: calc(100vw - 22em); /* scales better than width: 70vw */
+  height: auto;
+  display: inline-block;
+}
+
+
+/* ------------------- Fancy Buttons ------------------- */
+button3 {
+  margin: 10px;
+  float: left; /* Float the buttons side by side */
+  line-height: 35px; /* default line height for all button3s */
+}
+
+.fancy-btn {
+  padding: 10px 25px;
+  background: transparent;
+  outline: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+/** Fancy btn #0  **/
+.btn-0 {
+  width: 100px;
+  height: 35px;
+  line-height: 35px;   /* modifies line height specifically for this button */
+  padding: 0;
+  border: none;
+}
+
+/** Fancy btn #1  **/
+.btn-1 {
+  width: 100px;
+  height: 35px;
+  line-height: 35px;   /* modifies line height specifically for this button */
+  padding: 0;
+  border: none;
+}
+.btn-1 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-1:before,
+.btn-1:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: white;
+  transition: all 0.3s ease;
+}
+.btn-1:before {
+  height: 50%;
+  width: 2px;
+}
+.btn-1:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-1:hover:before {
+  height: 100%;
+}
+.btn-1:hover:after {
+  width: 100%;
+}
+.btn-1 span:before,
+.btn-1 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: white;
+  transition: all 0.3s ease;
+}
+.btn-1 span:before {
+  width: 2px;
+  height: 50%;
+}
+.btn-1 span:after {
+  width: 20%;
+  height: 2px;
+}
+.btn-1 span:hover:before {
+  height: 100%;
+}
+.btn-1 span:hover:after {
+  width: 100%;
+}
+
+/** Fancy btn # 2 **/
+.btn-2 {
+  width: 100px;
+  height: 35px;
+  line-height: 35px;   /* modifies line height specifically for this button */
+  padding: 0;
+  border: none;
+}
+.btn-2 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-2:before,
+.btn-2:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 2px;
+  background: white;
+}
+.btn-2:before {
+  right: 0;
+  top: 0;
+  transition: all 0.1s ease;
+}
+.btn-2:after {
+  left: 0;
+  bottom: 0;
+  transition: all 0.1s 0.2s ease;
+}
+.btn-2:hover:before {
+  transition: all 0.1s 0.2s ease;
+  height: 100%;
+}
+.btn-2:hover:after {
+  transition: all 0.1s ease;
+  height: 100%;
+}
+.btn-2 span:before,
+.btn-2 span:after {
+  position: absolute;
+  content: "";
+  background: white;
+}
+.btn-2 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+  transition: all 0.1s 0.1s ease;
+}
+.btn-2 span:after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+}
+.btn-2 span:hover:before {
+  width: 100%;
+}
+
+/* ---------------------------------------- */
+
+/* Modal */
 
